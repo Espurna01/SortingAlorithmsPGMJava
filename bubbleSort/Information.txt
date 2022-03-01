@@ -1,0 +1,3 @@
+Bubble sorting algorithm.
+	Total comparisons: 187
+	Total swaps: 102

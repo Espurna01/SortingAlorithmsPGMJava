@@ -1,0 +1,3 @@
+Selection sorting algorithm.
+	Total comparisons: 190
+	Total swaps: 16
