@@ -3,6 +3,7 @@ package App;
 import PGMManager.PGM;
 import SortingAlogrithms.BubbleSort;
 import SortingAlogrithms.Information;
+import SortingAlogrithms.InsertionSort;
 import SortingAlogrithms.SelectionSort;
 
 import java.io.FileWriter;
@@ -16,6 +17,8 @@ public class source {
     public static final String SELECTION_SORT = ".\\selectionSort\\";
     public static final String MERGE_SORT = ".\\mergeSort\\";
     public static final String COCKTAILSHAKER_SORT = ".\\cocktailShakerSort\\";
+    public static final String INSERTION_SORT = ".\\insertionSort\\";
+    public static final String STALIN_SORT = ".\\stalinSort\\";
 
     public static void main(String[] args) throws IOException {
         int[] array = new int[ARRAY_LENGTH];
@@ -23,7 +26,9 @@ public class source {
         Information info;
         BubbleSort bs = new BubbleSort();
         SelectionSort ss = new SelectionSort();
+        InsertionSort is = new InsertionSort();
         FileWriter fw;
+/*
 
         initializeArray(array);
         randomizeArray(array);
@@ -60,6 +65,24 @@ public class source {
 
         System.out.println("Selection sort finished... Total comparisons: " + info.getComparisons() + ", total swaps: " + info.getSwaps());
         System.out.println("Sorted array: " + printArray(array));
+*/
+        initializeArray(array);
+        randomizeArray(array);
+        if(pgm.resetDirectory(INSERTION_SORT)){
+            System.out.println("Directory reseted");
+        }
+        System.out.println("Starting array: " + printArray(array));
+        System.out.println("Applying insertion sort...");
+
+        PGM.savePGM(array, INSERTION_SORT + "insertion0.pgm");
+        info = is.sort(array);
+        fw = new FileWriter(INSERTION_SORT + "Information.txt", false);
+        fw.write("Insertion sorting algorithm.\n\tTotal comparisons: " + info.getComparisons() + "\n\tTotal swaps: " + info.getSwaps());
+        fw.close();
+
+        System.out.println("Selection sort finished... Total comparisons: " + info.getComparisons() + ", total swaps: " + info.getSwaps());
+        System.out.println("Sorted array: " + printArray(array));
+
     }
 
     public static void initializeArray(int[] array){

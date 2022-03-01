@@ -1,5 +1,7 @@
-/bubbleSort
-/mergeSort
-/prueba
-/quickSort
-/selectionSort
+bubbleSort/*.pgm
+mergeSort/*.pgm
+prueba/*.pgm
+quickSort/*.pgm
+selectionSort/*.pgm
+insertionSort/*.pgm
+stalinSort/*.pgm
