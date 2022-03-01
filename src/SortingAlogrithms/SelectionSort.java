@@ -12,7 +12,6 @@ public class SelectionSort extends Information {
     public Information sort(int[] array) throws IOException {
         swaps = 0;
         comparisons = 0;
-        PGM.saveStatePGM(array, SELECTION_SORT + "selection" + swaps + "-" + comparisons + ".pgm", 0, 1);
         for (int i = 0; i < array.length - 1; i++) {
             int mini = i;
             int j = i + 1;
