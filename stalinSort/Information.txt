@@ -1,0 +1,3 @@
+Stalin sorting algorithm.
+	Total comparisons: 142
+	Total swaps: 0

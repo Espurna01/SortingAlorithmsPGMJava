@@ -20,14 +20,12 @@ public class BubbleSort extends Information{
             for(int i = 0;i < array.length - 1 - sortedElements;i++){
                 //PGM.saveStatePGM(array, BUBBLE_SORT + "bubble" + swaps + "-" + comparisons + ".pgm", i);
                 if(array[i] > array[i + 1]){
-                    comparisons++;
-                    PGM.saveStatePGM(array, BUBBLE_SORT + "bubble" + swaps + "-" + comparisons + ".pgm", i, i + 1);
+                    PGM.saveStatePGM(array, BUBBLE_SORT + "bubble" + swaps + "-" + (comparisons + 1) + ".pgm", i, i + 1);
                     int tmp = array[i + 1];
                     array[i + 1] = array[i];
                     array[i] = tmp;
                     swaps++;
                     swapped = true;
-                    comparisons--;
                 }
                 comparisons++;
                 PGM.saveStatePGM(array, BUBBLE_SORT + "bubble" + swaps + "-" + comparisons + ".pgm", i, i + 1);

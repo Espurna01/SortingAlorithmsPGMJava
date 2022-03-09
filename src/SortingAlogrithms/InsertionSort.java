@@ -1,6 +1,10 @@
 package SortingAlogrithms;
 
+import PGMManager.PGM;
+
 import java.io.IOException;
+
+import static App.source.INSERTION_SORT;
 
 public class InsertionSort extends Information{
     @Override
@@ -15,7 +19,7 @@ public class InsertionSort extends Information{
                 comparisons++;
             }
             array[j + 1] = x;
-            swaps++;
+            PGM.savePGM(array, INSERTION_SORT + "insertion" + swaps + "-" + comparisons + ".pgm");
         }
         return this;
     }
